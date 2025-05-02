@@ -6,8 +6,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:ssr": "ng build && ng run lp-server-action:server",
-    "start": "node dist/lp-server-action/server/server.mjs",
+    "build:ssr": "npx ng build --configuration=production && npx ng run lp-server-action:server",
+    "start": "node dist/server/server.mjs",
     "serve:ssr:lp-server-action": "node dist/lp-server-action/server/server.mjs",
     "dev": "ng build --watch --configuration development & node dist/lp-server-action/server/server.mjs"
   },
