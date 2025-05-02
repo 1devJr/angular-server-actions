@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: angular-ssr
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: |
+      cd lp-server-action
+      npm install --legacy-peer-deps
+      npm run build:ssr
+    startCommand: |
+      cd lp-server-action
+      node dist/lp-server-action/server/server.mjs
+    rootDir: lp-server-action
